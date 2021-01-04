@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <title>2021년 복 많이 받으세요~</title>
+    <!-- 배포이미지 및 정보 -->
+     <meta property="og:image"
+        content="https://static.toiimg.com/thumb/msid-80053249,imgsize-264852,width-800,height-600,resizemode-75/80053249.jpg">
+    <meta property="og:title" content="오소오소의 카드">
+    <meta property="og:description" content="제가 만든 새해 감사카드입니다 :)">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="https://www.favicon.cc/logo3d/679358.png">
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+    
+    <style>
+        * {
+            font-family: 'Poor Story', cursive;
+        }
+
+        body {
+            background-color: #9b070f;
+        }
+
+        .envelope {
+            width: 200px;
+            height: 200px;
+            background-image: url('https://pngimg.com/uploads/envelope/envelope_PNG18366.png');
+            background-size: cover;
+            background-position: center;
+            margin: 200px auto 0px auto;
+            cursor: pointer;
+        }
+
+
+        .envelope-msg {
+            color: white;
+            text-align: center;
+        }
+
+        .letter-close {
+            display: none;
+            /* 디스플레이 숨김 */
+        }
+
+        .rtan {
+            width: 200px;
+            height: 200px;
+            background-image: url('https://item.kakaocdn.net/do/7964266e1ec55def219a079ed2df5d9af43ad912ad8dd55b04db6a64cddaf76d');
+            background-size: cover;
+            background-position: center;
+
+            margin: 100px auto 0px auto;
+            border-radius: 100px;
+            border: 5px solid white;
+
+            box-shadow: 0px 0px 10px 0px white;
+            /* 좌우 위아래 번짐 굵기 */
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .messagebox {
+            background-color: ivory;
+
+            width: 400px;
+            margin: auto;
+
+            color: brown;
+            padding: 30px;
+
+            font-size: 20px;
+            /* 줄간격 */
+            line-height: 30px;
+
+            box-shadow: 0px 0px 10px 0px white;
+
+        }
+
+        .from {
+            text-align: right;
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+
+        .letter-close {
+            display: block;
+        }
+
+        .letter-open {
+            display: none;
+        }
+
+        /* 모바일 365* 645 크기 커버 가능*/
+        @media screen and (max-width: 760px) {
+            .messagebox {
+                width: 300px;
+                font-size: 20px;
+                line-height: 30px;
+                padding: 20px;
+            }
+            .rtan {
+                width: 150px;
+                height: 150px;
+                margin: 70px auto 0px auto;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            .envelope {
+                margin: 150px auto 0px auto;
+            }
+        }
+    </style>
+
+    <script>
+
+        function open_letter() {
+            document.getElementsByClassName("letter-close")[0].style.display = 'none'
+            document.getElementsByClassName("letter-open")[0].style.display = 'block'
+        }
+
+        function go_rtan(){
+            alert('2021년도 건강히 복 많이 받으세요')
+            // window.location.href='https://spartacodingclub.kr?f_name=%EC%98%A4%EC%86%8C%ED%98%84&f_uid=5feb1bd51cc5bcde4f5b6536'
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="letter-close">
+        <div class="envelope" onclick="open_letter()">
+            <h2 class="envelope-msg">편지를 열어봐요!</h2>
+        </div>
+    </div>
+
+    <div class="letter-open">
+        <div class="rtan" onclick="go_rtan()"></div>
+        <h1>2021년 복 많이 많이 받으세요!</h1>
+
+        <div class="messagebox">
+            안녕히세요~<br/>
+            19년도에는 이런저런 일이 많았죠? <br />
+            연말까지도 조심히 지내는 생활을 했지만 <br />
+            21년도 새해에는 건강히 보내서<br/>
+            얼굴 보고 만났으면 좋겠습니다! :) <br />
+            <p class="from">2021.01.04 오소가</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
